@@ -1,0 +1,9 @@
+.app-list {
+    height: 100vh;
+    padding: 1rem;
+}
+
+.drawer-container {
+    width: 400px;
+    padding: 1rem;
+}

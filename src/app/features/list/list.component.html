@@ -1,0 +1,20 @@
+<mat-drawer-container autosize class="app-list">
+
+    <mat-drawer #drawer (openedChange)="onOpenedChange($event)" class="drawer-container" mode="over" position="end">
+        <router-outlet></router-outlet>
+    </mat-drawer>
+
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+
+</mat-drawer-container>
+
+<ng-template #content>
+    <h2>State</h2>
+    <p>
+        {{count}}
+        <button (click)="onPlus()">+</button>
+    </p>
+
+    <h2>Navigation</h2>
+    <button (click)="drawer.toggle()" routerLink="79c18cbb-82cf-4e87-afb3-72c46bc57c0b">Detail</button>
+</ng-template>
