@@ -1,6 +1,9 @@
 <div class="nav-list">
-    <a routerLink="./main">Main</a>
-    <a routerLink="./additional">Additional</a>
+    <a class="nav-item" *ngFor="let nav of navs"
+       [routerLink]="nav.path"
+       routerLinkActive="active">
+        {{nav.label}}
+    </a>
 </div>
 
 <router-outlet></router-outlet>
